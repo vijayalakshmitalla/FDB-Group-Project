@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Donor Registration</title>
+    <link rel="stylesheet" href="../style.css"> 
+</head>
+<body>
+    <h2>Register as a Donor</h2>
+    <form id="donorForm">
+        <label for="name">Name:</label><br>
+        <input type="text" id="name" name="name" required><br>
+        <label for="address">Address:</label><br>
+        <input type="text" id="address" name="address"><br>
+        <label for="bloodGroup">Blood Group:</label><br>
+        <input type="text" id="bloodGroup" name="bloodGroup" required><br>
+        <label for="healthHistory">Health History:</label><br>
+        <textarea id="healthHistory" name="healthHistory"></textarea><br>
+        <label for="eligibility">Eligibility Status (1 for Yes, 0 for No):</label><br>
+        <input type="number" id="eligibility" name="eligibility" min="0" max="1" required><br><br>
+        <button type="button" onclick="submitDonorForm()">Submit</button>
+    </form>
+
+    <div id="response"></div>
+
+    <script>
+        function submitDonorForm() {
+            const formData = new FormData(document.getElementById('donorForm'));
+            fetch('backend/add_donor.php', {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => response.text())
+            .then(data => document.getElementById('response').innerText = data)
+            .catch(error => console.error('Error:', error));
+        }
+    </script>
+</body>
+</html>
