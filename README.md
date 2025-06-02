@@ -113,11 +113,11 @@ http://localhost/blood-donation-management/public/index.html
 
 ## Team Members
 
-- Vijayalakshmi Talla – 11711703
-- Aamani Chamarthi – 11703676
-- Vamshi Kalyan Yerramilli – 11655488
-- Abhiram Yashwanth Pusarla – 11712109
-- Amani Peddolla – 11743144
-- Harshith Kumar Pappula – 11646762
+- Vijayalakshmi Talla
+- Aamani Chamarthi 
+- Vamshi Kalyan Yerramilli 
+- Abhiram Yashwanth Pusarla 
+- Amani Peddolla 
+- Harshith Kumar Pappula 
 
 
